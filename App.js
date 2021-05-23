@@ -48,6 +48,9 @@ export default function App() {
           <ActivityIndicator animating={loading} color="white"size="large"/>
           {!loading && (
             <View>
+              {error && (
+                <Text style={[styles.textStyle, styles.largeText]}>Could not load weather, pleasetrya different city.</Text>
+              )}
               {/* {console.log("hello :",location, weather, temperature)} */}
               <Text style={[styles.textStyle, styles.largeText]}>{location}</Text>
               <Text style={[styles.textStyle, styles.smallText]}>{weather}</Text>
